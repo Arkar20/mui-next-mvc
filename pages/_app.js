@@ -1,6 +1,7 @@
 import Head from "next/head";
+import ReduxStore from "src/rstore";
+import { ThemeProvider } from "@mui/material/styles";
 import theme from "@/config/theme";
-import ThemeProvider from "@/config/StyledMaterialThemeProvider";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -12,7 +13,7 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <ReduxStore Component={Component} pageProps={pageProps} />
       </ThemeProvider>
     </>
   );

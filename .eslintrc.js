@@ -18,6 +18,7 @@ module.exports = {
   },
   plugins: ["react", "prettier"],
   rules: {
+    "import/prefer-default-export": "off",
     "react/react-in-jsx-scope": "off",
     "import/no-duplicates": "error",
     "import/no-unresolved": "error",
@@ -43,7 +44,6 @@ module.exports = {
     "no-useless-rename": "error",
     "no-useless-return": "error",
     "react/jsx-props-no-spreading": "off",
-
     // overriding recommended rules
     "no-constant-condition": ["error", { checkLoops: false }],
     "no-console": ["error", { allow: ["log", "warn", "error"] }],
